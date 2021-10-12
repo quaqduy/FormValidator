@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(128, 128, 128, 0.212);
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+    padding: auto;
+}
+
+#form {
+    width: 400px;
+    padding: 10px;
+    margin: auto;
+    margin-top: 50px;
+    background-color: white;
+}
+
+h1,
+p {
+    text-align: center;
+    padding: 5px 0;
+}
+
+.form__group {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+}
+
+.form__group>label {
+    font-weight: 600;
+    padding-bottom: 5px;
+}
+
+.form__group>input {
+    height: 35px;
+    border: 2px solid rgba(128, 128, 128, 0.329);
+    border-radius: 5px;
+    padding: 3px 5px;
+    outline: none;
+}
+
+.form__group>input:hover {
+    background: rgba(128, 128, 128, 0.26);
+}
+
+.form__group>button {
+    background: rgb(95, 211, 219);
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+}
+
+.form__group>button:hover {
+    background: rgb(32, 205, 218);
+}
+
+.invalid {
+    position: relative;
+}
+
+.invalid>input {
+    border-color: red;
+}
+
+.invalid>label {
+    color: red;
+}
+
+.warningIcon {
+    color: red;
+    position: absolute;
+    right: 5px;
+    top: 41px;
+    display: none;
+}
+
+.invalid>.warningIcon {
+    display: block !important;
+}
+
+.invalid>.errorMessage {
+    color: red !important;
+}

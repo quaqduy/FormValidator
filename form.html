@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./form.css">
+    <link rel="stylesheet" href="./fontawesome-free/css/all.min.css">
+</head>
+
+<body>
+    <div class='main'>
+        <form id="form" action="#" method='post'>
+            <h1>Thành viên đăng ký</h1>
+            <p class="content">
+                Cùng nhau học lập trình miễn phí tại F8
+            </p>
+            <div class="form__group">
+                <label for="name">Tên đầy đủ</label>
+                <input name='fullName' type="name" rules='required' id="name" placeholder='Vui lòng nhập họ và tên'>
+                <div class="warningIcon">
+                    <i class="fas fa-exclamation-triangle"></i>
+                </div>
+                <div class="errorMessage"></div>
+            </div>
+            <div class="form__group ">
+                <label for="email">Email</label>
+                <input name='email' type="email" rules='required|email' id="email" placeholder="Vui lòng nhập Email của bạn">
+                <div class="warningIcon">
+                    <i class="fas fa-exclamation-triangle"></i>
+                </div>
+                <div class="errorMessage"></div>
+            </div>
+            <div class="form__group">
+                <label for="pass">Mật khẩu</label>
+                <input name='password' type="password" rules='required|min:6' id="pass" placeholder='Nhập mật khẩu'>
+                <div class="warningIcon">
+                    <i class="fas fa-exclamation-triangle"></i>
+                </div>
+                <div class="errorMessage"></div>
+            </div>
+            <div class="form__group ">
+                <label for="name">Nhập lại mật khẩu</label>
+                <input type="password" id="rePass" placeholder="Nhập lại mật khẩu">
+                <div class="warningIcon">
+                    <i class="fas fa-exclamation-triangle"></i>
+                </div>
+                <div class="errorMessage"></div>
+            </div>
+            <div class="form__group">
+                <button>
+                    Đăng ký
+                </button>
+            </div>
+        </form>
+    </div>
+</body>
+<script src='./form.js'></script>
+<script>
+    validation('#form');
+</script>
+
+</html>
